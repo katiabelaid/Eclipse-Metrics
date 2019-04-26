@@ -469,8 +469,7 @@ public abstract class AbstractMetricSource implements Constants, Serializable {
 	public String getPath() {
 		IJavaElement element = getJavaElement();
 		if (element.getElementType() <= IJavaElement.COMPILATION_UNIT) {
-			File file = new File(element.getPath().toString());
-			return file.getAbsolutePath();
+			return element.getPath().toString();
 		} /* else { */
 		return null;
 		/* } */
